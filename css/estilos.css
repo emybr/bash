@@ -1,34 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: Anurati-Regular;
+    src: url(/fuentes/anurati_font/Anurati-Regular.otf);
 }
 
 body {
     background-color: #efefef;
-
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Anurati-Regular;
     font-size: 40pt;
+    color: white;
     text-align: center;
 }
 
+#vt {
+    height: 45px;
+    width: auto;
+    margin-left: auto;
+}
+
 h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 25pt;
     text-transform: uppercase;
     text-align: center;
     padding-top: 15px;
 }
-
+.texto_card {
+    font-size: 15pt;
+    color: black;
+}
+.texto_card2 {
+    font-size: 15pt;
+    color: black;
+    padding-top: 4%;
+}
 .video1 {
     height: 400px;
     width: 100%;
     margin-bottom: 35px;
     box-shadow: 0 1rem 0.4rem rgba(0, 0, 0, 0.3);
-
 }
 
 .barra a {
@@ -40,17 +52,9 @@ h2 {
     color: rgb(213, 99, 112);
 }
 
-#vt {
-    height: 45px;
-    width: auto;
-    margin-left: auto;
-    
-
-}
-
 .logo-index {
     background-color: rgba(0, 0, 0, 0.143);
-    height: 80px
+    height: 80px;
 }
 
 footer {
@@ -71,7 +75,6 @@ footer {
 
 .container {
     width: 100%;
-
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -103,11 +106,10 @@ section article {
     height: 300px;
 }
 
-
 section article h3,
 section article p {
     margin: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 section article h3 {
@@ -151,16 +153,15 @@ section article:hover {
     display: flex;
     justify-content: center;
     padding-top: 10px;
-
 }
 
 .video-chico-youtube {
     width: 90%;
-    height: 90%x;
+    height: 90% x;
 }
 
 .titulo {
-    background-color: rgba(0, 0, 0, 0.143);
+    background-color: black;
     height: 80px;
     padding: 10px;
 }
@@ -175,7 +176,7 @@ section article:hover {
 .comparativo {
     display: flex;
     justify-content: center;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
 }
 
 .tabla {
@@ -190,16 +191,15 @@ section article:hover {
 .capacitaciones {
     list-style: none;
     font-size: 11pt;
-
 }
 
 .texto {
     font-size: 18px;
+    color: rgba(241, 241, 241, 0.3215686275);
 }
 
 .datos-personales {
     margin: 10px;
-
 }
 
 .barra {
@@ -284,7 +284,7 @@ form.example button {
     float: left;
     width: 20%;
     padding: 10px;
-    background: #5968749c;
+    background: rgba(89, 104, 116, 0.6117647059);
     color: white;
     font-size: 12px;
     border: 1px solid grey;
@@ -292,7 +292,6 @@ form.example button {
     /* Prevent double borders */
     cursor: pointer;
     max-width: 40px;
-
 }
 
 form.example button:hover {
@@ -305,24 +304,47 @@ form.example::after {
     clear: both;
     display: table;
 }
-.boton_busqueda{
+
+.boton_busqueda {
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
 
-@media (max-width:1366px){
+.btn-primary {
+    background-color: black;
+    border-color: black;
+    margin-left: 10px;
+}
+
+.fondo_contactanos {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info_contactos {
+    padding-top: 20%;
+}
+
+.card_contactos {
+    opacity: 55%;
+    background-image: url(/imagenes/f.elconfidencial.com-original-d9e-66d-793-d9e66d793adbc994841e60850a17e61c.jpeg);
+    color: #f1f1f1;
+}
+
+@media (max-width: 1366px) {
     .video-chico {
         width: 500px;
         height: 290px;
     }
-    .tarjeta_capacitacion{
+
+    .tarjeta_capacitacion {
         margin-bottom: 3%;
     }
 }
 
-
-@media (max-width:720px) {
+@media (max-width: 720px) {
     .barra {
         font-size: 14px;
         grid-gap: 12px;
@@ -333,7 +355,6 @@ form.example::after {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         justify-items: center;
-        
     }
 
     .card {
@@ -361,14 +382,26 @@ form.example::after {
         height: 200px;
         margin-bottom: 60px;
     }
-    .carousel-inner{
+
+    .carousel-inner {
         padding-top: 20px;
         margin-left: 0%;
         width: auto;
     }
-    .tam-imagen{
-    max-width: 720px;
-    height: auto;
+
+    .tam-imagen {
+        max-width: 720px;
+        height: auto;
+    }
+
+    .fondo_contactanos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 2;
+    }
+
+    .card_contactos {
+        margin-left: 25%;
     }
 }
 
@@ -500,17 +533,22 @@ form.example::after {
         grid-row: 10/11;
         padding-left: 50px;
     }
-    .carousel-inner{
+
+    .carousel-inner {
         padding-top: 20px;
         margin-left: 0%;
         width: auto;
     }
-    .tam-imagen{
-    max-width: 670px;
-    height: auto;
+
+    .tam-imagen {
+        max-width: 670px;
+        height: auto;
+    }
+
+    .card_contactos {
+        margin-left: 18%;
     }
 }
-
 
 @media (max-width: 433px) {
     .barra {
@@ -640,13 +678,27 @@ form.example::after {
         grid-row: 10/11;
         padding-left: 50px;
     }
-.carousel-inner{
-    padding-top: 20px;
-    margin-left: 0%;
-    width: auto;
-}
-.tam-imagen{
-max-width: 414px;
-height: auto;
-}
+
+    .carousel-inner {
+        padding-top: 20px;
+        margin-left: 0%;
+        width: auto;
+    }
+
+    .tam-imagen {
+        max-width: 414px;
+        height: auto;
+    }
+
+    .card_contactos {
+        margin-left: 1%;
+    }
+
+    .texto {
+        padding-left: 2%;
+    }
+
+    .info_contactos {
+        padding-top: 2%;
+    }
 }
