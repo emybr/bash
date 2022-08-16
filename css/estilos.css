@@ -314,7 +314,7 @@ form.example::after {
 .btn-primary {
     background-color: black;
     border-color: black;
-    margin-left: 10px;
+    margin-left: 105px;
 }
 
 .fondo_contactanos {
@@ -403,6 +403,11 @@ form.example::after {
 
     .card_contactos {
         margin-left: 25%;
+    }
+    .btn-primary {
+        background-color: black;
+        border-color: black;
+        margin-left: 20px;
     }
 }
 
@@ -564,7 +569,8 @@ form.example::after {
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 35px;
+        padding-top: 9px;
     }
 
     .video-grande-youtube {
